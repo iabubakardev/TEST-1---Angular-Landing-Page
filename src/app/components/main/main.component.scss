@@ -1,0 +1,110 @@
+.hero {
+    display: flex;
+    width: 100%;
+    min-height: 99vh;
+    background: url('../../../assets/images/fundo.svg');
+    background-position: bottom center;
+    background-size: cover;
+
+    .info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-weight: 400;
+        }
+
+        .btn {
+            margin-top: 60px;
+        }
+    }
+
+}
+
+.about {
+    padding: 100px 0;
+
+    p {
+        text-align: justify;
+        margin-top: 45px;
+        color: var(--first-color);
+        font-family: var(--body-font);
+        font-size: var(--medium2-font-size);
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+}
+
+.singup {
+    padding: 0 0 178px;
+
+    h2 {
+        font-size: 3.75rem;
+        font-weight: 400;
+        color: var(--first-color);
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .hero-right {
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            gap: 60px;
+
+            .hero-right {
+                max-width: 240px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width:479px) {
+
+    .hero {
+
+        .info {
+
+            .btn {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .about {
+        padding: 30px 0;
+
+        p {
+            margin-top: 1rem;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .singup {
+        padding-bottom: 70px;
+    }
+}
